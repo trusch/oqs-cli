@@ -65,7 +65,10 @@ var encryptCmd = &cobra.Command{
 		defer server.Clean() // clean up even in case of panic
 
 		server.Init(algId, nil)
-		keyCiphertext, sharedSecretServer := server.EncapSecret(keyBytes)
+		keyCiphertext, sharedSecretServer, err := server.EncapSecret(keyBytes)
+		if err != nil {
+			logrus.Fatal(err)
+		}
 		hash := sha3.NewShake256()
 		hash.Write(sharedSecretServer)
 		aesKey := make([]byte, 32)

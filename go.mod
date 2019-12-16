@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/mitchellh/go-homedir v1.1.0
-	github.com/open-quantum-safe/liboqs-go v0.0.0-20191113203624-c61c8f4cb8fe
+	github.com/open-quantum-safe/liboqs-go v0.0.0-20191210154108-be2170cc79ae
 	github.com/sirupsen/logrus v1.2.0
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/viper v1.5.0

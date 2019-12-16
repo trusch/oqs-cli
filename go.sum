@@ -63,6 +63,8 @@ github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223/go.mod h1:qRW
 github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
 github.com/open-quantum-safe/liboqs-go v0.0.0-20191113203624-c61c8f4cb8fe h1:LIcpa/TssTqhrzDlYhNZxZN1B93htm45tby4oDr/JsA=
 github.com/open-quantum-safe/liboqs-go v0.0.0-20191113203624-c61c8f4cb8fe/go.mod h1:4S9+nsSIEsdAUrEMXIeu2/XYjFiArMsIN86aHgYPzxA=
+github.com/open-quantum-safe/liboqs-go v0.0.0-20191210154108-be2170cc79ae h1:RYstmHN0mkORrNWOIOVrm1QHqRWOQnVJORHCzAKjb3c=
+github.com/open-quantum-safe/liboqs-go v0.0.0-20191210154108-be2170cc79ae/go.mod h1:4S9+nsSIEsdAUrEMXIeu2/XYjFiArMsIN86aHgYPzxA=
 github.com/pelletier/go-toml v1.2.0 h1:T5zMGML61Wp+FlcbWjRDT7yAxhJNAiPPLOFECq181zc=
 github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

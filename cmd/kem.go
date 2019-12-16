@@ -41,7 +41,10 @@ var kemCmd = &cobra.Command{
 		client := oqs.KeyEncapsulation{}
 		defer client.Clean() // clean up even in case of panic
 		client.Init(algId, nil)
-		pubKey := client.GenerateKeypair()
+		pubKey, err := client.GenerateKeyPair()
+		if err != nil {
+			logrus.Fatal(err)
+		}
 		privKey := client.ExportSecretKey()
 		if output == "" {
 			fmt.Printf("pub: %x\n", pubKey)

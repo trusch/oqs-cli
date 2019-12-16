@@ -72,7 +72,10 @@ to quickly create a Cobra application.`,
 		verifier := oqs.Signature{}
 		defer verifier.Clean() // clean up even in case of panic
 		verifier.Init(algId, nil)
-		isValid := verifier.Verify(dataBytes, signatureBytes, keyBytes)
+		isValid, err := verifier.Verify(dataBytes, signatureBytes, keyBytes)
+		if err != nil {
+			logrus.Fatal(err)
+		}
 		if !isValid {
 			fmt.Println("SIGNATURE NOT VALID")
 			os.Exit(1)

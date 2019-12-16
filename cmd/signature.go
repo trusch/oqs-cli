@@ -41,7 +41,10 @@ var signatureCmd = &cobra.Command{
 		signer := oqs.Signature{}
 		defer signer.Clean() // clean up even in case of panic
 		signer.Init(algId, nil)
-		pubKey := signer.GenerateKeypair()
+		pubKey, err := signer.GenerateKeyPair()
+		if err != nil {
+			logrus.Fatal(err)
+		}
 		privKey := signer.ExportSecretKey()
 		if output == "" {
 			fmt.Printf("pub: %x\n", pubKey)

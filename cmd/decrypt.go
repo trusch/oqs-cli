@@ -72,7 +72,10 @@ var decryptCmd = &cobra.Command{
 			logrus.Fatal("wrong key ciphertext lenght")
 		}
 
-		sharedSecretClient := client.DecapSecret(keyCiphertext)
+		sharedSecretClient, err := client.DecapSecret(keyCiphertext)
+		if err != nil {
+			logrus.Fatal(err)
+		}
 		hash := sha3.NewShake256()
 		hash.Write(sharedSecretClient)
 		aesKey := make([]byte, 32)

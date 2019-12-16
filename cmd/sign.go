@@ -59,7 +59,10 @@ var signCmd = &cobra.Command{
 		defer signer.Clean() // clean up even in case of panic
 		signer.Init(algId, keyBytes)
 
-		signature := signer.Sign(dataBytes)
+		signature, err := signer.Sign(dataBytes)
+		if err != nil {
+			logrus.Fatal(err)
+		}
 		if output == "" {
 			fmt.Printf("%x\n", signature)
 		} else {
